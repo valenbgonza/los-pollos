@@ -101,7 +101,7 @@
             }
         } else {
             echo "<p style='text-align:center;'>No se encontraron resultados o hubo un error.</p>";
-        }git
+        }
 
         mysqli_close($conexion);
     ?>

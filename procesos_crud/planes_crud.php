@@ -1,7 +1,9 @@
 <?php
 $codigo = $_POST[´txt_plan_id´];
 echo $codigo;
-
+$sql = "SELECT * FROM planes WHERE plan_id = '$codigo'";
+require_once("conexion.php");
+$ejecutar = mysqli_query($conexion, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
