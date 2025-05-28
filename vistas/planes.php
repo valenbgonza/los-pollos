@@ -84,26 +84,24 @@
                 echo "<div class='card'>";
 
                 // Imagen del plan
-                $imagen = !empty($fila['imagen']) ? htmlspecialchars($fila['imagen']) : 'https://walmartgt.vtexassets.com/arquivos/ids/298519/Telefono-Celular-Samsung-A525-128Gb-2-42257.jpg?v=637980105988200000';
+                $imagen = !empty($fila['imagen']) ? htmlspecialchars($fila['imagen']) : 'https://es.digitaltrends.com/wp-content/uploads/2024/10/Realme-GT-7-Pro-2.jpeg?resize=1200%2C720&p=1';
                 echo "<img src='" . $imagen . "' alt='Imagen del plan'>";
 
                 echo "<div class='card-content'>";
-                echo "<h2>Plan #" . htmlspecialchars($fila['id']) . "</h2>";
+                echo "<h2>Plan #" . htmlspecialchars($fila['plan_id']) . "</h2>";
                 foreach ($fila as $campo => $valor) {
                     if ($campo !== 'id' && $campo !== 'imagen') {
                         echo "<p><strong>" . ucfirst(htmlspecialchars($campo)) . ":</strong> " . htmlspecialchars($valor) . "</p>";
                     }
                 }
                 echo "</div>"; // .card-content
-
                 // Botón Editar que lleva a planes_crud.php
-                echo "<a class='edit-btn' href='planes_crud.php?id=" . urlencode($fila['id']) . "'>Editar</a>";
-
+                echo "<a class='edit-btn' href='../procesos_crud/planes_crud.php" . urlencode($fila['plan_id']) . "'>Editar</a>";
                 echo "</div>";  // .card
             }
         } else {
             echo "<p style='text-align:center;'>No se encontraron resultados o hubo un error.</p>";
-        }
+        }git
 
         mysqli_close($conexion);
     ?>
