@@ -84,7 +84,7 @@
                 echo "<div class='card'>";
 
                 // Imagen del plan
-                $imagen = !empty($fila['imagen']) ? htmlspecialchars($fila['imagen']) : '../imagenes/imagen-default.jpg';
+                $imagen = !empty($fila['imagen']) ? htmlspecialchars($fila['imagen']) : 'https://walmartgt.vtexassets.com/arquivos/ids/298519/Telefono-Celular-Samsung-A525-128Gb-2-42257.jpg?v=637980105988200000';
                 echo "<img src='" . $imagen . "' alt='Imagen del plan'>";
 
                 echo "<div class='card-content'>";
